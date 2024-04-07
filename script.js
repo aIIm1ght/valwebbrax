@@ -1,7 +1,5 @@
 $(function () {
-  $(".card").draggable({
-    delay: 100, // Adding a delay to help distinguish between click and drag
-  });
+  $(".card").draggable();
 
   $("#yesButton").click(function () {
     $("#popup-card").removeClass("hidden");
