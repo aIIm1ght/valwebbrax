@@ -1,11 +1,23 @@
 $(function () {
-  $(".card").draggable();
-
-  $("#yesButton").click(function () {
-    $("#popup-card").removeClass("hidden"); // Show the card by removing 'hidden' class
+  $(".card").draggable({
+    delay: 100, // Adding a delay to help distinguish between click and drag
   });
 
-  // Existing code for draggable cards and "No" button hover functionality
+  $("#yesButton").click(function () {
+    $("#popup-card").removeClass("hidden");
+  });
+
+  // Code for the "No" button's hover effect
+});
+// $(document).on("click", "#yesButton", function () {
+//   $("#popup-card").removeClass("hidden");
+// });
+
+$(function () {
+  $("#yesButton").on("click touchstart", function (e) {
+    e.preventDefault(); // Prevent default action of the event
+    $("#popup-card").removeClass("hidden");
+  });
 });
 
 $("#noButton").hover(function () {

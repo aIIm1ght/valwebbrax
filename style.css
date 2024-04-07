@@ -53,6 +53,10 @@ body, html {
     margin: 10px 0;
 }
 
+#yesButton {
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
 #card1, #card2, #card3, #card4, #card5, #popup-card {
     background-size: cover;
     background-position: center;
@@ -116,6 +120,7 @@ body, html {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    touch-action: auto; 
 }
 
 #noButton {
